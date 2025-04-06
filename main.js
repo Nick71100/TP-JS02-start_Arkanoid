@@ -4,23 +4,23 @@ const ball = document.getElementById("ball");
 
 let x = 100;
 let y = 100;
-let vx = 3;
-let vy = 3;
+let speedX = 3;
+let speedY = 3;
 
 function moveBall() {
   const ballWidth = ball.offsetWidth;
-  const windowWidth = window.innerWidth;
   const ballHeight = ball.offsetHeight;
+  const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
 
-  x += vx;
-  y += vy;
+  x += speedX;
+  y += speedY;
 
   if (x <= 0 || x + ballWidth >= windowWidth) {
-    vx = -vx;
+    vx = -speedX;
   }
   if (y <= 0 || y + ballHeight >= windowHeight) {
-    vy = -vy;
+    vy = -speedY;
   }
 
   ball.style.left = x + "px";
